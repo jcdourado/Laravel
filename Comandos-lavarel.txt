@@ -14,5 +14,11 @@ Rotas:
 	Arquivo: app/Http/routes.php
 
 	Routes::get('urlAcessada',funcao que retorna a pagina)
+
 -- Cap3
 
+Controllers - Dentro de app/Http/Controllers e deve herdar de Controller ( Nao esquecer o namespace )
+
+DB - configurar o .env
+
+Utilizar o 'Illuminate\Support\Facades\DB' para fazer selects, updates, inserts com metodos estáticos;

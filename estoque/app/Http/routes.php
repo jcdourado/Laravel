@@ -10,6 +10,8 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::get('/tes',function(){
+Route::get('/produtos',function(){
 	return '<h1>kkkk</h1>';
 });
+
+Route::get('/produtos','ProdutoController@lista');
