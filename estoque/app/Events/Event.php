@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace estoque\Events;
 
 abstract class Event
 {

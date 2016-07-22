@@ -1,0 +1,18 @@
+-- Cap1 
+
+laravel new nomeProjeto
+
+php artisan serve
+
+Artisan - ferramenta ja inclusa no laravel
+
+-- Cap2
+
+Mudar namespace: php artisan app:name nomeProjeto
+
+Rotas:
+	Arquivo: app/Http/routes.php
+
+	Routes::get('urlAcessada',funcao que retorna a pagina)
+-- Cap3
+
