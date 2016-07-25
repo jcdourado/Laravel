@@ -55,3 +55,6 @@ view()->file('outroCaminho');
 
 Colocar o css do public do https://github.com/Turini/estoque-laravel no public
 
+-- Cap6
+
+Para pegar os parametros URL: Resquest::input('valor','default') (use Request)
