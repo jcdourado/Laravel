@@ -58,3 +58,12 @@ Colocar o css do public do https://github.com/Turini/estoque-laravel no public
 -- Cap6
 
 Para pegar os parametros URL: Resquest::input('valor','default') (use Request)
+
+Para ver se tem na URL: Request::has('param')
+
+Request:all() - retorna um array com todos os param
+
+Request::only('param') -> apenas o parametro
+
+Request::except('ee') -> exceto esse param
+
