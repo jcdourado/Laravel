@@ -42,3 +42,16 @@ php artisan migrate:rollback - faz rollback
 Seeders : alimentar a tabela - Colocar no mesmo arquivo que o DatabaseSeeder e extender de Seeder
 
 php artisan db:seed 
+
+-- Cap5
+
+View cria na : resources/views e chama no controller por view('nome')
+
+AppDebug=true no .env
+
+Para acessar variaveis na view : view('nome')->with('nome',$varLocal); ou ->withProdutos($var) ou return view('nomeView',$array)
+
+view()->file('outroCaminho');
+
+Colocar o css do public do https://github.com/Turini/estoque-laravel no public
+

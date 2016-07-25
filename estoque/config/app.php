@@ -157,7 +157,7 @@ return [
         estoque\Providers\AuthServiceProvider::class,
         estoque\Providers\EventServiceProvider::class,
         estoque\Providers\RouteServiceProvider::class,
-
+        Bestmomo\Scafold\ScafoldServiceProvider::class,
     ],
 
     /*
