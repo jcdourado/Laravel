@@ -8,12 +8,12 @@ Artisan - ferramenta ja inclusa no laravel
 
 -- Cap2
 
-Mudar namespace: php artisan app:name nomeProjeto
+php artisan app:name nomeProjeto - Mudar namespace
 
 Rotas:
 	Arquivo: app/Http/routes.php
 
-	Routes::get('urlAcessada',funcao que retorna a pagina)
+	Route::get('urlAcessada',funcao que retorna a pagina)
 
 -- Cap3
 
@@ -22,3 +22,23 @@ Controllers - Dentro de app/Http/Controllers e deve herdar de Controller ( Nao e
 DB - configurar o .env
 
 Utilizar o 'Illuminate\Support\Facades\DB' para fazer selects, updates, inserts com metodos estáticos;
+
+-- Cap4
+
+Models - Dentro de app/ e deve herdar de Model ( com o namespace )
+
+php artisan make:model nomeClasse
+php artisan make:controller nomeClasse
+
+Para mudar o nome da Model no BD é so criar um "protected $table = 'nomeTable'"
+
+php artisan make:model nomeClasse -m (cria o migration da classe)
+
+No migration - o up é para criar a tabela e o down para destrui-la
+
+php artisan migrate - executa as migrations
+php artisan migrate:rollback - faz rollback
+
+Seeders : alimentar a tabela - Colocar no mesmo arquivo que o DatabaseSeeder e extender de Seeder
+
+php artisan db:seed 
