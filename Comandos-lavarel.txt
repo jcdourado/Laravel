@@ -75,3 +75,20 @@ No metodo do route pode coloca um parametro que ele recebe
 
 Juntamente ao get do Route pode chamar o metodo where('param','RegEx')
 
+-- Cap7
+
+Blade : template engine
+
+Definir um layout como principal e as secoes
+
+@yield('nome') -> define um local para jogar conteudo
+
+@extends('nome') -> em qual arquivo deve aparecer
+
+@section('nome') -> onde jogar
+
+@stop
+
+{{ }} - area para printar (da pra usar 'or' e outras condicoes caso nao exista algo)
+
+@for, foreach, while, forelse - empty(caso nao tenha nada) , if - else elseif,

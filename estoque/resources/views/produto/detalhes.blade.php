@@ -1,10 +1,6 @@
-<html>
-<head>
-	<link href="/css/app.css" rel="stylesheet">
-	<title>Controle de estoque</title>
-</head>
-<body>
-	<div class="container">
+@extends('layout.principal')
+
+@section('conteudo')
 		<h1>Detalhes do produto: <?= $p->nome ?> </h1>
 		<ul>
 			<li>
@@ -17,6 +13,4 @@
 				<b>Quantidade em estoque:</b> <?= $p->quantidade ?>
 			</li>
 		</ul>
-	</div>
-</body>
-</html>
+@stop
