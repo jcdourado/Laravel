@@ -92,3 +92,5 @@ Definir um layout como principal e as secoes
 {{ }} - area para printar (da pra usar 'or' e outras condicoes caso nao exista algo)
 
 @for, foreach, while, forelse - empty(caso nao tenha nada) , if - else elseif,
+
+-- Cap8
