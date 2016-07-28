@@ -16,4 +16,4 @@ Route::get('/produtos',function(){
 
 Route::get('/produtos','ProdutoController@lista');
 
-Route::get('/produtos/mostra','ProdutoController@mostra');
+Route::get('/produtos/mostra/{id?}','ProdutoController@mostra');
