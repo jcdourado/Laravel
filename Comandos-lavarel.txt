@@ -94,3 +94,13 @@ Definir um layout como principal e as secoes
 @for, foreach, while, forelse - empty(caso nao tenha nada) , if - else elseif,
 
 -- Cap8
+
+Query builder: como o hibernate - passa um array, com os nomes dos campos e os valores a entrarem
+
+Metodos Route : get, post, any
+
+Para usar post  tem que colcoar um input hidden com o nome _token e com o value chamado csrf_token()
+
+return redirect('/pagina') - redireciona para outra page
+
+redirect('/page')->whitInput() -> manda os inputs - para acessa -> old('nome')
