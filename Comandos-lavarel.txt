@@ -103,4 +103,16 @@ Para usar post  tem que colcoar um input hidden com o nome _token e com o value 
 
 return redirect('/pagina') - redireciona para outra page
 
-redirect('/page')->whitInput() -> manda os inputs - para acessa -> old('nome')
+redirect('/page')->whitInput() -> manda os inputs - para acessa -> old('nome') -> pode mandar um objeto request selecionando os dados desejados
+
+redirect()->action('Classe@metodo') = igual o routes tambem funciona
+
+pode usar o action nos {{ }} do blade
+
+Rotas nomeadas: Route::get('/nome',['as' => 'nome', 'uses' => 'Classe@metodo'])
+
+ai chama por redirect()->route('nome')
+
+Para retornar um json, pode-se retornar o array puro ou chamar a funcao: response()->json($var);
+
+Para baixar response()->download($caminho)
