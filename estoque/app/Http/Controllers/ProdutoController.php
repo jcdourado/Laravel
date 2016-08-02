@@ -3,24 +3,24 @@ namespace estoque\Http\Controllers;
 
 use Request;
 use Illuminate\Support\Facades\DB;
+use estoque\Produto;
 
 class ProdutoController extends Controller{
 
 	public function lista(){
 
-		$produtos = DB::select('select * from produtos');
-
+		$produtos = Produto::all();
 		return view('produto.listagem')->with('produtos',$produtos);
 	}
 
 	public function mostra($id){
-		$produto = DB::select('select * from produtos where id = ?',[$id]);
+		$produto = Produto::find($id);
 
 		if(empty($produto)){
 			return "Esse produto não existe";
 		}
 
-		return view('produto.detalhes')->with('p',$produto[0]);
+		return view('produto.detalhes')->with('p',$produto);
 	}
 
 	public function novo(){
@@ -28,18 +28,36 @@ class ProdutoController extends Controller{
 	}
 
 	public function adiciona(){
-		$nome = Request::input('nome');
-		$descricao = Request::input('desc');
-		$valor = Request::input('valor');
-		$quantidade = Request::input('qtd');
 
-		DB::insert('insert into produtos(nome, quantidade, valor, descricao) values (?,?,?,?)', array($nome,$quantidade,$valor,$descricao));
-
+		Produto::create(Request::all());
+		
 		return redirect()->action('ProdutoController@lista')->withInput();
 	}
 
 	public function listaJson(){
-		$produtos = DB::select('select * from produtos');
+		$produtos = Produto::all();
 		return response()->json($produtos);
+	}
+
+	public function remove($id){
+		$produto = Produto::find($id);
+		$produto->delete();
+		return redirect()->action('ProdutoController@lista');
+	}
+
+	public function alterar($id){
+		$produto = Produto::find($id);
+		return view('produto.altera',array('p' => $produto,'id' => $id));
+	}
+
+	public function finish($id){
+		$produto = Produto::find($id);
+		$produto->nome = Request::input('nome');
+		$produto->quantidade = Request::input('quantidade');
+		$produto->descricao = Request::input('descricao');
+		$produto->valor = Request::input('valor');
+		$produto->save();
+
+		return redirect()->action('ProdutoController@lista');
 	}
 }

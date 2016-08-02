@@ -116,3 +116,18 @@ ai chama por redirect()->route('nome')
 Para retornar um json, pode-se retornar o array puro ou chamar a funcao: response()->json($var);
 
 Para baixar response()->download($caminho)
+
+-- Cap10
+
+Eloquent ORM: ORM do Laravel, basta usar os metodos provenientes da propria Model
+
+Metodos:
+
+::all() retorna todos
+::find(param) retorna o objeto
+->save(); -> pode passar todas as propriedades ao construtor usando o Resquest::all -> mas tem que se usar um 
+			protected $fillable com um array com todas as propriedades
+			protected $guarded array de coisas a nao mexer
+
+Pode-se usar o Produto::create passando os parametros também
+::delete apaga
