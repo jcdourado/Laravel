@@ -151,3 +151,15 @@ Um objeto $errors estara disponivel, pega os erros com all()
 
 Na classe de Validation coloca um metodo messages retornando um array com as mensagens em caso de erro, no formato: 'nome.required' => o :attribute bla bla bla
 
+-- Cap12:
+use Auth
+
+Autenticar, tem diversas paginas ja feitas para registrar e logar, o home herda de app.
+
+
+::logout
+::attempt(email,senha) -> logar
+::validate -> valida
+::check -> ve se o user esta logado
+::loginUsingId(id) -> logar usando o id
+::user -> ve o proprio usuario
