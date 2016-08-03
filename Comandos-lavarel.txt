@@ -131,3 +131,23 @@ Metodos:
 
 Pode-se usar o Produto::create passando os parametros também
 ::delete apaga
+
+-- Cap11:
+Validator
+
+Metodos:
+->fails - se falhar
+::make(array com os inputs e as regras)
+
+Form Request: validar os dados
+
+php artisan make:request nome
+
+Ai no retorno, so passar o array com as regrinhas
+
+Tem que passar no metodo o request e usar o all
+
+Um objeto $errors estara disponivel, pega os erros com all()
+
+Na classe de Validation coloca um metodo messages retornando um array com as mensagens em caso de erro, no formato: 'nome.required' => o :attribute bla bla bla
+

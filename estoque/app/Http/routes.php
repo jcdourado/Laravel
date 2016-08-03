@@ -29,3 +29,6 @@ Route::get('/produtos/remove/{id}','ProdutoController@remove');
 Route::get('/produtos/editar/{id}','ProdutoController@alterar');
 
 Route::post('/produtos/finish/{id}','ProdutoController@finish');
+
+Route::get('home', 'HomeController@index');
+Route::controllers(['auth' => 'Auth\AuthController','password' => 'Auth\PasswordController',]);
