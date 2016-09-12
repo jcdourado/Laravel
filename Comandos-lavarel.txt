@@ -163,3 +163,5 @@ Autenticar, tem diversas paginas ja feitas para registrar e logar, o home herda 
 ::check -> ve se o user esta logado
 ::loginUsingId(id) -> logar usando o id
 ::user -> ve o proprio usuario
+
+make:auth - cria a parte do usuario
