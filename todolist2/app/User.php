@@ -27,7 +27,4 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function asks(){
-      return $this->hasMany('App\Ask');
-    }
 }

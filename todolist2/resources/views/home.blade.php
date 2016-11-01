@@ -8,7 +8,6 @@
                 <div class="panel-heading">Tarefas:</div>
 
                 <div class="panel-body">
-                    You are logged in!
                 </div>
             </div>
         </div>

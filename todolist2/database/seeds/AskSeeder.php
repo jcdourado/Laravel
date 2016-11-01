@@ -11,7 +11,7 @@ class AskSeeder extends Seeder
      */
     public function run()
     {
-        $this->call('AskModelSeeder')
+        $this->call('AskModelSeeder');
     }
 
 
@@ -19,10 +19,10 @@ class AskSeeder extends Seeder
 
 class AskModelSeeder extends Seeder {
   public function run(){
-    DB::insert('insert into asks(nome, descricao, prioridade) values (?,?,?)', array('Fazer Arroz', 3, 'Fazer o arroz de forno'));
+    DB::insert('insert into asks(nome, prioridade, descricao, user_id) values (?,?,?,?)', array('Fazer Arroz', 3, 'Fazer o arroz de forno',1));
 
-		DB::insert('insert into asks(nome, descricao, prioridade) values (?,?,?)', array('Comprar um forninho', 1,'Com painel automático e forno elétrico'));
+		DB::insert('insert into asks(nome, prioridade, descricao ,user_id) values (?,?,?,?)', array('Comprar um forninho', 1,'Com painel automático e forno elétrico',1));
 
-		DB::insert('insert into asks(nome, descricao, prioridade) values (?,?,?)', array('Sair com o dog', 5,'Andar na praia com o cachorro'));
+		DB::insert('insert into asks(nome, prioridade,descricao,user_id) values (?,?,?,?)', array('Sair com o dog', 5,'Andar na praia com o cachorro',1));
   }
 }

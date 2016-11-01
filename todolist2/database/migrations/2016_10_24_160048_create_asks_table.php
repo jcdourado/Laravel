@@ -18,6 +18,7 @@ class CreateAsksTable extends Migration
             $table->string('nome');
             $table->string('descricao');
             $table->integer('prioridade');
+            $table->integer('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
