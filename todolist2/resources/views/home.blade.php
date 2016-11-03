@@ -8,6 +8,31 @@
                 <div class="panel-heading">Tarefas:</div>
 
                 <div class="panel-body">
+                  <table class="table">
+                    <tr>
+                      <th>ID</th>
+                      <th>Nome</th>
+                      <th>Prioridade</th>
+                      <th>Ações</th>
+                    </tr>
+                    @foreach(TodoList\User::find(Auth::user()->id)->asks as $row)
+                      @if($row->prioridade > 4)
+                        <tr class="danger">
+                      @else
+                        <tr>
+                      @endif
+                          <td>{{ $row->id }}</td>
+                          <td>{{ $row->nome }}</td>
+                          <td>{{ $row->prioridade }}</td>
+                          <td><a href="/editar/{{ $row->id }}">Editar</a>
+                            <a href="/excluir/{{ $row->id }}">Excluir</a>
+                          </td>
+                      </tr>
+                    @endforeach
+                  </table>
+                  @if(old('id'))
+                    <p>{{old('id')}}</p>
+                  @endif
                 </div>
             </div>
         </div>

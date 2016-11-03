@@ -27,4 +27,7 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function asks(){
+      return $this->hasMany('TodoList\Ask','user_id');
+    }
 }
