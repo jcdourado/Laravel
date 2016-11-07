@@ -5,7 +5,9 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Tarefas:</div>
+                <div class="panel-heading">Tarefas:
+                  <a href="/adicionar.php" class="button" style="float:right;">+ Nova Tarefa</a>
+                </div>
 
                 <div class="panel-body">
                   <table class="table">
