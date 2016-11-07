@@ -28,4 +28,20 @@ use Auth;
 
       return redirect('home')->withInput();
     }
+
+    function redirectEditar($id){
+      return view('editar')->with('ask',Ask::find($id));
+    }
+
+    function editar(Request $req){
+      $ask = Ask::find($req->id);
+
+      $ask->nome = $req->nome;
+      $ask->descricao = $req->descricao;
+      $ask->prioridade = $req->prioridade;
+
+      $ask->save();
+
+      return redirect('home');
+    }
 }

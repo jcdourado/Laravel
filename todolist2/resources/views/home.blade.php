@@ -36,7 +36,7 @@
                     <p>{{old('id')}}</p>
                   @endif
                   @if(old('nome'))
-                    <p class="bg-success">Produto {{ old('nome')}} adicionado com sucesso!</p>
+                    <p class="bg-success">Produto {{ old('nome')}} foi adicionado com sucesso!</p>
                   @endif
                 </div>
             </div>
