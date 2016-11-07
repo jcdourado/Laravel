@@ -10,7 +10,7 @@ use TodoList\Ask;
 
 use Auth;
 
-class AskController extends Controller
+  class AskController extends Controller
 {
     function excluir($id){
       if(Auth::check()){
@@ -21,5 +21,11 @@ class AskController extends Controller
       else{
         return redirect('home');
       }
+    }
+
+    function adicionar(Request $req){
+      Ask::create($req->all());
+
+      return redirect('home')->withInput();
     }
 }

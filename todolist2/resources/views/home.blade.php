@@ -6,7 +6,7 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">Tarefas:
-                  <a href="/adicionar.php" class="button" style="float:right;">+ Nova Tarefa</a>
+                  <a href="/adicionar" style="float:right;">+ Nova Tarefa</a>
                 </div>
 
                 <div class="panel-body">
@@ -34,6 +34,9 @@
                   </table>
                   @if(old('id'))
                     <p>{{old('id')}}</p>
+                  @endif
+                  @if(old('nome'))
+                    <p class="bg-success">Produto {{ old('nome')}} adicionado com sucesso!</p>
                   @endif
                 </div>
             </div>

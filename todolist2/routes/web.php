@@ -20,3 +20,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::get('/excluir/{id?}',"AskController@excluir");
+
+Route::get('/adicionar',function(){
+    return view('adicionar');
+});
+
+Route::post('/adicionado','AskController@adicionar');
