@@ -8,6 +8,8 @@ use TodoList\Http\Requests;
 
 use TodoList\Ask;
 
+use TodoList\Http\Requests\AskRequest;
+
 use Auth;
 
   class AskController extends Controller
@@ -23,7 +25,7 @@ use Auth;
       }
     }
 
-    function adicionar(Request $req){
+    function adicionar(AskRequest $req){
       Ask::create($req->all());
 
       return redirect('home')->withInput();
@@ -33,7 +35,7 @@ use Auth;
       return view('editar')->with('ask',Ask::find($id));
     }
 
-    function editar(Request $req){
+    function editar(AskRequest $req){
       $ask = Ask::find($req->id);
 
       $ask->nome = $req->nome;
